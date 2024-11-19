@@ -1,0 +1,13 @@
+<configuration>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level[%X{corrId}][%X{service}][%X{controller}] %-18logger{0} : %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="id.co.bni.merchant" level="debug"/>
+
+    <root level="info">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>

@@ -1,7 +1,7 @@
 package com.yummy.puding.genshin.database.auth.dto;
 
-import com.yummy.puding.genshin.database.auth.entity.RoleEntity;
-import com.yummy.puding.genshin.database.auth.entity.UserEntity;
+import com.yummy.puding.genshin.database.entity.RoleEntity;
+import com.yummy.puding.genshin.database.entity.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

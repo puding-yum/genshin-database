@@ -1,6 +1,6 @@
 package com.yummy.puding.genshin.database.auth.config.security;
 
-import com.yummy.puding.genshin.database.auth.exception.CustomException;
+import com.yummy.puding.genshin.database.exception.CustomException;
 import com.yummy.puding.genshin.database.auth.service.UserDetailServiceImpl;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -23,20 +23,15 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 import java.util.List;
 
-//@Component
+@Component
 public class JwtAuthFilter extends OncePerRequestFilter {
     private final Logger log = LogManager.getLogger(JwtAuthFilter.class);
 
-//    @Autowired
-    private final JwtUtil jwtUtil;
+    @Autowired
+    private  JwtUtil jwtUtil;
 
-//    @Autowired
-    private final UserDetailServiceImpl userDetailServiceImpl;
-
-    public JwtAuthFilter(JwtUtil jwtUtil, UserDetailServiceImpl userDetailServiceImpl) {
-        this.jwtUtil = jwtUtil;
-        this.userDetailServiceImpl = userDetailServiceImpl;
-    }
+    @Autowired
+    private UserDetailServiceImpl userDetailServiceImpl;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -51,7 +46,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             }
 
             if (StringUtils.hasText(jwt) && jwtUtil.validateJwtToken(jwt)) {
-
                 String username = jwtUtil.getUsernameFromJwtToken(jwt);
 
                 UserDetails userDetail = userDetailServiceImpl.loadUserByUsername(username);

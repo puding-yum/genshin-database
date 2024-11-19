@@ -1,4 +1,4 @@
-package com.yummy.puding.genshin.database.auth.exception;
+package com.yummy.puding.genshin.database.exception;
 
 import org.springframework.http.HttpStatus;
 

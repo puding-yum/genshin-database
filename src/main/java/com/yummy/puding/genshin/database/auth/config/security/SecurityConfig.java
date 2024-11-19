@@ -26,8 +26,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
     private final Logger log = LogManager.getLogger(SecurityConfig.class);
 
-//    @Autowired
-//    private JwtAuthFilter jwtAuthFilter;
+    @Autowired
+    private JwtAuthFilter jwtAuthFilter;
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -35,17 +35,17 @@ public class SecurityConfig {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
-    private JwtUtil jwtUtil;
-
-    @Autowired
-    private UserDetailServiceImpl userDetailServiceImpl;
+//    @Autowired
+//    private JwtUtil jwtUtil;
+//
+//    @Autowired
+//    private UserDetailServiceImpl userDetailServiceImpl;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         log.info("securityFilterChain");
 
-        JwtAuthFilter jwtAuthFilter = new JwtAuthFilter(jwtUtil, userDetailServiceImpl);
+//        JwtAuthFilter jwtAuthFilter = new JwtAuthFilter(jwtUtil, userDetailServiceImpl);
 
         http
             .cors(cors -> cors.disable())
