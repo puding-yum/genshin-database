@@ -73,6 +73,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             String responseBody = "resp";
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             response.getWriter().write(responseBody);
+            response.getWriter().flush();
         }
     }
 
@@ -81,7 +82,8 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         AntPathMatcher pathMatcher = new AntPathMatcher();
         List<String> excludeUrlPatterns = List.of(
             "/v1/user/register",
-            "/v1/auth/login"
+            "/v1/auth/login",
+            "/v1/character/**"
         );
         return excludeUrlPatterns.stream().anyMatch(path -> pathMatcher.match(path, request.getServletPath()));
     }
