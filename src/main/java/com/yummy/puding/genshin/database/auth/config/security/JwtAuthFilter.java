@@ -83,7 +83,8 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         List<String> excludeUrlPatterns = List.of(
             "/v1/user/register",
             "/v1/auth/login",
-            "/v1/character/**"
+            "/v1/character/**",
+            "/v1/element/**"
         );
         return excludeUrlPatterns.stream().anyMatch(path -> pathMatcher.match(path, request.getServletPath()));
     }

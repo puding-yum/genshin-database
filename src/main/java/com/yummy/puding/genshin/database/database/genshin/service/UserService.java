@@ -1,8 +1,8 @@
 package com.yummy.puding.genshin.database.database.genshin.service;
 
-import com.yummy.puding.genshin.database.database.genshin.client.req.RegisterReq;
-import com.yummy.puding.genshin.database.database.genshin.client.res.ErrorRes;
-import com.yummy.puding.genshin.database.database.genshin.client.res.RegisterRes;
+import com.yummy.puding.genshin.database.database.genshin.model.client.req.RegisterReq;
+import com.yummy.puding.genshin.database.database.genshin.model.client.res.ErrorRes;
+import com.yummy.puding.genshin.database.database.genshin.model.client.res.RegisterRes;
 import com.yummy.puding.genshin.database.database.genshin.repository.RoleRepository;
 import com.yummy.puding.genshin.database.database.genshin.repository.UserRepository;
 import com.yummy.puding.genshin.database.entity.RoleEntity;

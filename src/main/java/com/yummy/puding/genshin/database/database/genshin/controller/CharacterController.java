@@ -1,9 +1,8 @@
 package com.yummy.puding.genshin.database.database.genshin.controller;
 
-import com.yummy.puding.genshin.database.database.genshin.client.req.RegisterReq;
+import com.yummy.puding.genshin.database.database.genshin.model.client.req.RegisterReq;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

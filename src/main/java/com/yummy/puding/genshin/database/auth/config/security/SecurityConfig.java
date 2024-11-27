@@ -45,6 +45,7 @@ public class SecurityConfig {
                 .requestMatchers("/v1/user/register").permitAll()
                 .requestMatchers("/v1/auth/login").permitAll()
                 .requestMatchers("/v1/character/get").permitAll()
+                .requestMatchers("/v1/element/**").permitAll()
                 .anyRequest().authenticated())
             .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authenticationProvider(authenticationProvider())

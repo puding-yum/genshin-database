@@ -1,17 +1,17 @@
 package com.yummy.puding.genshin.database.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.util.UUID;
 
 @Entity
-@Table(name = "ROLES")
-public class RoleEntity {
+@Table(name = "ELEMENTS")
+public class ElementEntity {
     @Id
     @UuidGenerator
     @JsonIgnore

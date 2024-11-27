@@ -1,4 +1,4 @@
-package com.yummy.puding.genshin.database.database.genshin.client.res;
+package com.yummy.puding.genshin.database.database.genshin.model.client.res;
 
 public class RegisterRes {
     private String message;

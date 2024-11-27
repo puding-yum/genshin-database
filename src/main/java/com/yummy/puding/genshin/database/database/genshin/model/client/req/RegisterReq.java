@@ -1,4 +1,4 @@
-package com.yummy.puding.genshin.database.database.genshin.client.req;
+package com.yummy.puding.genshin.database.database.genshin.model.client.req;
 
 public class RegisterReq {
     private String username;
